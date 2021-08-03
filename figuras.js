@@ -1,115 +1,93 @@
-//código del cuadrado
-console.group("Cuadrados");
-
-//const ladoCuadrado = 5;
-//console.log ("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
-
-function perimetroCuadrado(lado) {
-    return lado * 4;
-};
-
-perimetroCuadrado(50); 
-
-//console.log ("El perímetro del cuadrado mide: " + perimetroCuadrado + "cm");
-
-function areaCuadrado(lado) {
-    return lado * lado;
-};
-
-areaCuadrado(50);
-
-//console.log ("El área del cuadrado mide: " + areaCuadrado + "cm^2");
-console.groupEnd();
-
-
-//código del triángulo
-
+/*
+// Código del triángulo
 console.group("Triángulos");
 
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
-console.log(
-    "Los lados del tríangulo miden " 
-    + ladoTriangulo1 
-    + "cm, " 
-    + ladoTriangulo2 
-    + "cm y " 
-    + baseTriangulo 
-    + "cm"
-);
+// const ladoTriangulo1 = 6;
+// const ladoTriangulo2 = 6;
+// const baseTriangulo = 4;
+// console.log(
+//   "Los lados del triángulo miden: "
+//   + ladoTriangulo1
+//   + "cm, "
+//   + ladoTriangulo2
+//   + "cm, "
+//   + baseTriangulo
+//   + "cm"
+// );
 
-const alturaTriagulo = 5.5;
-console.log("La altura del triángulo mide: " + alturaTriagulo + "cm");
+// const alturaTriangulo = 5.5;
+// console.log("La altura del triángulo es de: " + alturaTriangulo + "cm");
 
-//Calcular el perímetro del triángulo con variables
-const ladoTriangulo1 = 6;
-const ladoTriangulo2 = 6;
-const baseTriangulo = 4;
-
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
-
-console.log ("El perímetro del triángulo mide: " + perimetroTriangulo + "cm");
-
-
-//Calcular el perímetro del tríangulo con una función
 function perimetroTriangulo(lado1, lado2, base) {
-    return lado1 + lado2 + base
-}; 
+  return lado1 + lado2 + base;
+}
+// console.log("El perímetro del triángulo es: " + perimetroTriangulo + "cm");
 
-perimetroTriangulo(6, 6, 4);
-
-console.log ("El perímetro del triángulo mide: " + perimetroTriangulo + "cm");
-
-const areaTriangulo = (baseTriangulo * alturaTriagulo) /2;
-console.log ("El área del triángulo mide: " + areaTriangulo + "cm^2");
+function areaTriangulo(base, altura) {
+  return (base * altura) / 2;
+}
+console.log("El área del triángulo es: " + areaTriangulo + "cmˆ2");
 
 console.groupEnd();
 
+// Código del círculo
+console.group("Círculos");
 
-//Código del círculo con funciones
-console.group("Círculo");
+// Radio
+// const radioCirculo = 4;
+// console.log("El radio del círculo es: " + radioCirculo + "cm");
 
-//Diámetro
+// Diámetro
 function diametroCirculo(radio) {
-    return radio * 2
-};
+  return radio * 2;
+}
 
-//Pi
-const Pi = Math.PI;
+// PI
+const PI = Math.PI;
+console.log("PI es: " + PI);
 
-//Circunferencia
+// Circunferencia
 function perimetroCirculo(radio) {
-    const diametro = diametroCirculo(radio);
-    return diametro * Pi;
-};
+  const diametro = diametroCirculo(radio);
+  return diametro * PI;
+}
 
-//Área
+// Área
 function areaCirculo(radio) {
-    return radio * radio * Pi;
+  return (radio * radio) * PI;
+}
+
+console.groupEnd();
+*/
+
+
+// Código del cuadrado
+console.group("Cuadrados");
+
+function perimetroCuadrado(lado) {
+  return lado * 4;
 };
 
-//Llamadas a las funciones por separado
-console.log(diametroCirculo(10));
-console.log(perimetroCirculo(10));
-console.log(areaCirculo(10));
+function areaCuadrado(lado) {
+  return lado * lado;
+};
 
 console.groupEnd();
 
 
 // Aquí interactuamos con el HTML
 function calcularPerimetroCuadrado() {
-    const input = document.getElementById("InputCuadrado");
-    const value = input.value;
-  
-    const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
-  };
-  
-  function calcularAreaCuadrado() {
-    const input = document.getElementById("InputCuadrado");
-    const value = input.value;
-  
-    const area = areaCuadrado(value);
-    alert(area);
-  };
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const perimetro = perimetroCuadrado(value);
+  alert(perimetro);
+};
+
+function calcularAreaCuadrado() {
+  const input = document.getElementById("InputCuadrado");
+  const value = input.value;
+
+  const area = areaCuadrado(value);
+  alert(area);
+};
